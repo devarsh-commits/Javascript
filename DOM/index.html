@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript DOM</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            width: 80vw;
+            height: 50vh;;
+            margin: 2px auto;
+            border-radius: 5px;
+            background-color:aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container .box{
+            border: 2px solid blue;
+            width: 50%;
+            min-height: 25vh;
+            margin:10px auto;
+            border-radius: 10px;
+            background-color: blue;
+            /* transform: rotate(36deg); */
+            transition: transform,2s,ease-in-out,2s;
+            
+        }
+        .container .box:hover{
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+    <script>
+        document.title="Devarsh ka page"
+        console.log(document.title)
+        document.body.style.backgroundColor="yellow";
+    </script>
+    
+</body>
+</html>
