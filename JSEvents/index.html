@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Events</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Hey click me to change the text</div>
+    </div>
+    <button id="btn">Click here</button>
+    <script>document.addEventListener("keydown",(e)=>{
+        console.log(e,e.key)
+    })
+    function randomcolor(){
+        let r=Math.ceil(0 + Math.random() *255);
+        let g=Math.ceil(0 + Math.random() *255);
+        let b=Math.ceil(0 + Math.random() *255);
+        return `rgb(${r},${g},${b})`
+    }
+    setInterval(()=>{
+     document.body.style.background=randomcolor();
+    },1000)
+    
+    
+    </script>
+</body>
+</html>
