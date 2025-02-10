@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event bubbling</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            background-color: aqua;
+            margin: 12px;
+            padding: 12px;
+        }
+        .mincont{
+            border: 2p solid red;
+            background-color: yellow;
+            margin: 12px;
+            padding: 12px;
+        }
+        .box{
+            border: 2px solid red;
+            background-color:pink;
+            margin: 12px;
+            padding: 12px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="mincont">
+            <div class="box">I am a box</div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector(".box").addEventListener("click",(e)=>{
+            alert("You have clicked box");
+            e.stopPropagation();
+
+        })
+
+        document.querySelector(".container").addEventListener("click",()=>{
+            alert("You have clicked container");
+        })
+
+        document.querySelector(".mincont").addEventListener("click",()=>{
+            alert("You have clicked mincont");
+        })
+    </script>
+    
+</body>
+</html>
