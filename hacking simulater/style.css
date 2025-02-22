@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+body {
+    background-color: green;
+}
+.Header{
+    box-sizing: border-box;
+    color: rgb(173, 23, 23);
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+} 
+
+.Msgs {
+    color: rgb(173, 23, 23);
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+}
+.msg1{
+    display:flex;
+    gap: 10px;
+}
+
+.msg2{
+    display:flex;
+    gap: 10px;
+}
+.dt2{
+    display: flex;
+    position: relative;
+    bottom: 25px;
+
+}
+.msg3{
+    display:flex;
+    gap: 10px;
+}
+.dt33{
+    display: flex;
+    position: relative;
+    bottom: 25px;
+
+}
+.msg4{
+    display:flex;
+    gap: 10px;
+}
+.dt4{
+    display: flex;
+    position: relative;
+    bottom: 25px;
+
+}
+.msg5{
+    display:flex;
+    gap: 10px;
+}
+.dt5{
+    display: flex;
+    position: relative;
+    bottom: 25px;
+
+}
+.d1 .d2 .d3{
+    display: flex;
+}

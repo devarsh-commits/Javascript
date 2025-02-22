@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacking Simulator
+    </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+        body {
+            background-color: green;
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            font-family: "Roboto Mono", serif;
+            font-optical-sizing: auto;
+
+        }
+
+        .box {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Hacking Simulator</div>
+</body>
+<script>
+    console.log("Script is running");
+
+    const randtime = () => {
+        return new Promise((resolve, reject) => {
+            let timeout = 1 + 6 * Math.random();
+            setTimeout(() => {
+                resolve();
+            }, timeout * 1000);
+        })
+    }
+    const additem = async (data) => {
+        await randtime();
+        let div = document.createElement("div");
+        div.innerHTML = data;
+        document.body.append(div);
+    }
+    async function main() {
+
+
+        setInterval(()=>{
+           let last=document.body.lastElementChild;
+           let lst=last.innerHTML;
+           if(last.innerHTML.endsWith("...")){
+            last.innerHTML=last.innerHTML.slice(0,lst.length-3);
+           }
+           else{
+            last.innerHTML=lst+".";
+           }
+
+        },700);
+
+        let text = ["Initializing Hacking", "Reading Your files", "Password files are detected", "Sending all files and password to the server", "Cleaning up"]
+        for (const data of text) {
+            await additem(data);
+        }
+    }
+    main();
+</script>
+
+</html>
