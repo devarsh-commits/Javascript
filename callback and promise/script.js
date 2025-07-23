@@ -14,13 +14,11 @@ const callback =(args)=>{
     console.log(args);
 }
 
-let func = (src,callback) => {
-  let scr=document.createElement("script");
-  scr.src=src;
-  scr.onload=callback("Hanjii",fn("kendi yooy"))
-  document.head.append(scr);
+let func=(src,callback)=>{
+let scrpt=document.createElement("script");
+scrpt.src=src;
+scrpt.onload=callback("kendi yoyo honey singh")
 }
-
 func("https://cdnjs.cloudflare.com/ajax/libs/script.js/2.0.2/script.min.js",callback)
 console.log('hii bhai');
 
